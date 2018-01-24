@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>一覧</h1>
+    <%= form_for(@picture) do |f| %>
+        <div class="form-group">
+            <%= @image.name %>
+            <%= f.file_field :picture %>
+            <%= f.submit "保存" %>
+        </div>
+    <% end %>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>検索結果</h2>
+    <div>
+        <% if @img_box.size === 0 %>
+            <%= @no_img %>
+        <% else %>
+            <% 18.times do |i| %>
+                <%= link_to(image_tag(@img_box[i]), 
+                fun_storage_path(:src => @img_box[i])) %>
+            <% end %>
+        <% end %>
+    </div>
+    <script>
+       /*
+       $('.click_img').click(function(){
+           var src = $(this).attr('src')
+            $.ajax({
+                type: 'POST',
+                url: '', // わけわかめ
+                data: src,
+                dataType: 'html',
+            })
+            .done(function(data){
+                console.log(src)
+            })
+            .fail(function(data){
+                alert('残念')
+            })
+       });
+       */
+    </script>
+</body>
+</html>
