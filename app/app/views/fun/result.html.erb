@@ -14,11 +14,14 @@
         <% else %>
             <% 18.times do |i| %>
                 <%= link_to(image_tag(@img_box[i]), 
-                fun_storage_path(:src => @img_box[i])) %>
+                fun_storage_path(:src => @img_box[i]), :class => "fabo") %><p>♡</p>
             <% end %>
         <% end %>
     </div>
     <script>
+        $('#fabo').click(function(){
+            $('fabo').css("color","red")
+        })
        /*
        $('.click_img').click(function(){
            var src = $(this).attr('src')

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'fun/index', to: 'fun#index'
   get 'fun/result', to: 'fun#result'
   get 'fun/list', to: 'fun#list'
+  get 'fun/search', to: 'fun#search'
   post 'fun/search', to: 'fun#search'
   get 'fun/storage', to: 'fun#storage'
 end
